@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
 
-interface Props {
-   time: number;
-}
-
 interface State {
    time: number;
    seconds: number;
    minutes: number;
+   sign: string;
 }
 
 export const Timer2 = (props: any) => {
@@ -15,8 +12,9 @@ export const Timer2 = (props: any) => {
 
    const [state, setState] = useState<State>({
       time: props.time,
-      seconds: props.time - ~~(props.time / 60) * 60,
-      minutes: ~~(props.time / 60)
+      seconds: Math.abs(props.time) % 60,
+      minutes: Math.floor(Math.abs(props.time) / 60),
+      sign: props.time <= 0 ? '-' : ''
    });
 
    useEffect(() => {
@@ -27,8 +25,9 @@ export const Timer2 = (props: any) => {
 
          setState({
             time: state.time - 1,
-            minutes: ~~((state.time - 1) / 60),
-            seconds: state.time - ~~((state.time - 1) / 60) * 60 - 1
+            seconds: Math.abs(state.time - 1) % 60,
+            minutes: Math.floor(Math.abs(state.time - 1) / 60),
+            sign: state.time <= 0 ? '-' : ''
          });
       }, 1000);
    }, [state.time]);
@@ -36,21 +35,31 @@ export const Timer2 = (props: any) => {
    return (
       <div className="timer">
          {!done && (
-            <div className='timer__undone'>
+            <div className="timer__undone">
+               {state.sign}
                {state.minutes < 10 ? '0' + state.minutes : state.minutes}:
                {state.seconds < 10 ? '0' + state.seconds : state.seconds}
             </div>
          )}
 
          {done && (
-            <div className='timer__done'>
-               <p>Your time exceeded. Please finish answering the question as soon as possible.</p>
-               {state.seconds}
+            <div className="timer__done">
+               <p>
+                  Your time exceeded. Please finish answering the question as
+                  soon as possible.
+               </p>
+               {state.sign}
+               {state.minutes < 10 ? '0' + state.minutes : state.minutes}:
+               {state.seconds < 10 ? '0' + state.seconds : state.seconds}
             </div>
          )}
 
          <div className="timer__state">
-            {state.time > 120 ? <span style={{color: '#1d439a'}}>PREPARE</span> : <span style={{color: '#ec1c24'}}>SPEAK!</span>}
+            {state.time > 120 ? (
+               <span style={{ color: '#1d439a' }}>PREPARE</span>
+            ) : (
+               <span style={{ color: '#ec1c24' }}>SPEAK!</span>
+            )}
          </div>
       </div>
    );

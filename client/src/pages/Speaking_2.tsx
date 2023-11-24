@@ -32,7 +32,7 @@ export const Speaking_2 = () => {
             {data?.question}
          </div>
 
-         <Timer2 time={180} />
+         <Timer2 time={5} />
       </div>
    );
 };
