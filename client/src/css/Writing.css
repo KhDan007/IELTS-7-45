@@ -1,0 +1,53 @@
+.writing {
+  padding: 10px 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.writing__resetBtn {
+  font-size: 25px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.writing__explanation {
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.writing__question {
+  font-size: 35px;
+  font-weight: bold;
+}
+.writing__text {
+  margin-top: 20px;
+  resize: none;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  height: 300px;
+  padding: 5px;
+}
+.writing__submitBtn {
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 5px 20px;
+}
+
+.timer {
+  font-size: 40px;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+.timer__done {
+  color: #ec1c24;
+}
+.timer__done p {
+  color: black;
+}
+.timer__state {
+  margin-top: 40px;
+  font-weight: bold;
+}

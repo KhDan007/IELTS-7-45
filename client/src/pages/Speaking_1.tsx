@@ -21,18 +21,17 @@ export const Speaking_1 = () => {
 
    return (
       <div className="speaking">
+         <Timer time={15} />
          <button onClick={refetchData} className='speaking__resetBtn'>Reset the question</button>
 
          <div className="speaking__explanation">
-            This is speaking part 1. You'll have a random question from a real
+            This is speaking part 1. You'll have a random question from the real
             current list of questions, that can be asked during the IELTS exam.
             You'll have 15 seconds to answer. Here is your question:
          </div>
          <div className="speaking__question">
             {data?.question}
          </div>
-
-         <Timer time={15} />
       </div>
    );
 };

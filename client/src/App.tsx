@@ -1,6 +1,7 @@
 import './css/App.css';
 import './css/Header.css';
 import './css/Speaking.css';
+import './css/Writing.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Speaking_1 } from './pages/Speaking_1';
@@ -14,7 +15,13 @@ import { QueryClient, QueryClientProvider} from '@tanstack/react-query';
 function App() {
    return (
       <div className="App">
-         <QueryClientProvider client={new QueryClient()}>
+         <QueryClientProvider client={new QueryClient({
+            defaultOptions: {
+               queries: {
+                  staleTime: Infinity,
+               }
+            }
+         })}>
             <Router>
             <Header />
 
