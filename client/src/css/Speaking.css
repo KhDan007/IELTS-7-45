@@ -1,0 +1,37 @@
+.speaking {
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.speaking__resetBtn {
+  font-size: 25px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.speaking__explanation {
+  padding-bottom: 50px;
+  font-size: 25px;
+}
+.speaking__question {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.timer {
+  font-size: 40px;
+  text-align: center;
+  line-height: 1;
+  margin-top: 20px;
+}
+.timer__done {
+  color: #ec1c24;
+}
+.timer__done p {
+  color: black;
+}
+.timer__state {
+  margin-top: 40px;
+  font-weight: bold;
+}

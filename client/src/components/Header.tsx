@@ -1,4 +1,3 @@
-import '../css/Header.css';
 import { Link } from 'react-router-dom';
 import sloganTransparent from '../img/slogan_transparent.png';
 import logoTransparent from '../img/logo_transparent.png';

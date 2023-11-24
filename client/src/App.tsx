@@ -1,4 +1,6 @@
 import './css/App.css';
+import './css/Header.css';
+import './css/Speaking.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Speaking_1 } from './pages/Speaking_1';
@@ -7,10 +9,13 @@ import { Writing_1 } from './pages/Writing_1';
 import { Writing_2 } from './pages/Writing_2';
 import { Home } from './pages/Home';
 
+import { QueryClient, QueryClientProvider} from '@tanstack/react-query';
+
 function App() {
    return (
       <div className="App">
-         <Router>
+         <QueryClientProvider client={new QueryClient()}>
+            <Router>
             <Header />
 
             <Routes>
@@ -21,6 +26,8 @@ function App() {
                <Route path='/writing/part-2' element={<Writing_2 />}></Route>
             </Routes>
          </Router>
+         </QueryClientProvider>
+         
       </div>
    );
 }
