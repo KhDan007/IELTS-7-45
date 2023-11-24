@@ -8,10 +8,18 @@
    justify-content: space-between;
    padding-right: 15px;
 
-   &__left, &__right {
+   &__left,
+   &__right {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
+   }
+
+   &__left {
+      a {
+         display: inline-block;
+         margin-right: 15px;
+      }
    }
 
    a {

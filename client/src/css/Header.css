@@ -11,6 +11,10 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+.header__left a {
+  display: inline-block;
+  margin-right: 15px;
+}
 .header a {
   color: #fff;
   text-decoration: none;
