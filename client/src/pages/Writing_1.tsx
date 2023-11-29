@@ -2,10 +2,16 @@ import { useQuery } from '@tanstack/react-query';
 import loadedImage from '../img/IELTS-Writing-Task-1-Academic-Flood-Diagram.gif';
 // import Axios from 'axios';
 import { Timer } from '../components/Timer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const Writing_1 = () => {
    const [writingText, setWritingText] = useState('');
+   const [questionText, setQuestionText] = useState('');
+
+   const randomProperty = function (obj: any) {
+      var keys = Object.keys(obj);
+      return obj[keys[(keys.length * Math.random()) << 0]];
+   };
 
    const { data, isLoading } = useQuery({
       queryKey: ['writing-part-1'],
@@ -68,16 +74,16 @@ export const Writing_1 = () => {
       }
    });
 
-   const randomProperty = function (obj: any) {
-      var keys = Object.keys(obj);
-      return obj[keys[(keys.length * Math.random()) << 0]];
-   };
+   useEffect(() => {
+      setQuestionText(isLoading ? "Loading..." : randomProperty(data));
+   }, [data, isLoading]);
 
    const refetchData = () => {
       window.location.reload();
    };
 
    const submitWriting = () => {
+      // Send to server
       console.log(writingText);
    };
 
@@ -96,7 +102,7 @@ export const Writing_1 = () => {
          <div className="writing__image">
             <img src={loadedImage} alt="" />
          </div>
-         <div className="writing__question">{data && randomProperty(data)}</div>
+         <div className="writing__question">{questionText}</div>
 
          <textarea
             className="writing__text"
