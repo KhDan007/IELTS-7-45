@@ -1,4 +1,5 @@
 import logo_transparent from '../img/logo_transparent.png';
+import '../css/Home.css';
 
 export const Home = () => {
    return (
@@ -11,7 +12,7 @@ export const Home = () => {
                   alt="no image"
                   className="img-fluid"
                />
-               <p>Получи 7.0 за 45 дней интенсивной подготовки!</p>
+               <p className='tilda-sans-bold'>Получи 7.0 за 45 дней интенсивной подготовки!</p>
             </div>
          </div>
       </div>
