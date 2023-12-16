@@ -4,9 +4,11 @@
 .tilda-sans-bold {
    font-family: 'TildaSansBold';
 }
+
 .tilda-sans-light {
    font-family: 'TildaSansLight';
 }
+
 .tilda-sans-semibold {
    font-family: 'TildaSansSemibold';
 }
@@ -16,9 +18,33 @@
       font-size: 20px;
 
       @media (max-width: 410px) {
-         font-size: 16px;  
+         font-size: 16px;
       }
    }
+}
 
-   
+.input {
+   border: none;
+   border-bottom: 1px solid #000;
+   border-radius: 0;
+   padding: 0px 0px 20px;
+
+   &:focus {
+      box-shadow: none;
+      border-bottom: 2px solid #61a6f6;
+   }
+}
+
+.trial {
+   &__btn {
+      background-color: #0B172D;
+      color: #FFF;
+      border-radius: 30px;
+      border: none;
+      transition: 0.2s;
+
+      &:hover {
+         background-color: #4f5767;
+      }
+   }
 }
