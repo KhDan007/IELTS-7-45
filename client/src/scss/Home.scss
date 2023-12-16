@@ -1,13 +1,24 @@
 @import 'main';
 
+// Fonts
 .tilda-sans-bold {
    font-family: 'TildaSansBold';
 }
-
 .tilda-sans-light {
    font-family: 'TildaSansLight';
 }
-
 .tilda-sans-semibold {
    font-family: 'TildaSansSemibold';
+}
+
+.slogan {
+   &__text {
+      font-size: 20px;
+
+      @media (max-width: 410px) {
+         font-size: 16px;  
+      }
+   }
+
+   
 }
