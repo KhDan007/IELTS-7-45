@@ -1,13 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
 // import Axios from 'axios';
 import { Timer } from '../components/Timer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const Writing_2 = () => {
    const [writingText, setWritingText] = useState('');
+   const [questionText, setQuestionText] = useState('');
+
+   const randomProperty = function (obj: any) {
+      var keys = Object.keys(obj);
+      return obj[keys[(keys.length * Math.random()) << 0]];
+   };
 
    const { data, isLoading } = useQuery({
-      queryKey: ['writing-part-2'],
+      queryKey: ['writing-part-1'],
       queryFn: () => {
          // Axios.get()
          const data = {
@@ -67,16 +73,16 @@ export const Writing_2 = () => {
       }
    });
 
-   const randomProperty = function (obj: any) {
-      var keys = Object.keys(obj);
-      return obj[keys[(keys.length * Math.random()) << 0]];
-   };
+   useEffect(() => {
+      setQuestionText(isLoading ? "Loading..." : randomProperty(data));
+   }, [data, isLoading]);
 
    const refetchData = () => {
       window.location.reload();
    };
 
    const submitWriting = () => {
+      // Send to server
       console.log(writingText);
    };
 
@@ -92,7 +98,7 @@ export const Writing_2 = () => {
             current list of questions, that can be asked during the IELTS exam.
             You'll have 40 minutes to answer. Here is your question:
          </div>
-         <div className="writing__question">{data && randomProperty(data)}</div>
+         <div className="writing__question">{questionText}</div>
 
          <textarea
             className="writing__text"
