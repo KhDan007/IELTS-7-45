@@ -6,6 +6,7 @@ import { Advantages } from './home/Advantages';
 import { Books } from './home/Books';
 import { How } from './home/How';
 import { Alim } from './home/Alim';
+import { Reviews } from './home/Reviews';
 export const Home = () => {
    return (
       <>
@@ -16,6 +17,8 @@ export const Home = () => {
          <Books />
          <How />
          <Alim />
+         <Reviews />
+         <Trial />
       </>
    );
 };
