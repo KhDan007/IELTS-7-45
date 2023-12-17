@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 import img1 from '../../img/examples/1.jpg';
 import img2 from '../../img/examples/2.jpg';
 import img3 from '../../img/examples/3.jpg';
