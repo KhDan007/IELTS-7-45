@@ -7,6 +7,7 @@ import { Books } from './home/Books';
 import { How } from './home/How';
 import { Alim } from './home/Alim';
 import { Reviews } from './home/Reviews';
+import { ImagesSlider } from './home/ImagesSlider';
 export const Home = () => {
    return (
       <>
@@ -19,6 +20,7 @@ export const Home = () => {
          <Alim />
          <Reviews />
          <Trial />
+         <ImagesSlider />
       </>
    );
 };
