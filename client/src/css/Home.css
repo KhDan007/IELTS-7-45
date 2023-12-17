@@ -61,3 +61,23 @@
 .trial__btn:hover {
   background-color: #4f5767;
 }
+
+.examples {
+  padding: 0px 20px;
+}
+.examples__imageContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%;
+  margin-bottom: 20px;
+}
+.examples__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
