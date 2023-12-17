@@ -1,9 +1,10 @@
 import '../css/Home.css';
-import { Slogan } from './components/Slogan';
-import { Trial } from './components/Trial';
-import { Examples } from './components/Examples';
-import { Advantages } from './components/Advantages';
-import { Books } from './components/Books';
+import { Slogan } from './home/Slogan';
+import { Trial } from './home/Trial';
+import { Examples } from './home/Examples';
+import { Advantages } from './home/Advantages';
+import { Books } from './home/Books';
+import { How } from './home/How';
 export const Home = () => {
    return (
       <>
@@ -12,6 +13,7 @@ export const Home = () => {
          <Examples />
          <Advantages />
          <Books />
+         <How />
       </>
    );
 };
