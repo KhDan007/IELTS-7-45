@@ -1,0 +1,43 @@
+@import 'main';
+
+.footer {
+   background-color: #333;
+   color: #fff;
+   padding: 30px 0;
+
+   &__logo {
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 700;
+   }
+
+   &__links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+
+      a {
+         display: inline-block;
+         background-color: #fff;
+         border-radius: 50%;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: center;
+         align-items: center;
+         width: 35px;
+         height: 35px;
+         margin-right: 10px;
+
+         img {
+            display: inline-block;
+            width: 60%;
+         }
+      }
+   }
+
+   &__copyright {
+      
+      text-align: center;
+   }
+}

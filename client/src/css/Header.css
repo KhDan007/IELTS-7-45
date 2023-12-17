@@ -1,3 +1,37 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@font-face {
+  font-family: "TildaSansBold";
+  src: url("../fonts/TildaSans-Bold.eot");
+  src: url("../fonts/TildaSans-Bold.woff2") format("woff2"), url("../fonts/TildaSans-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TildaSansLight";
+  src: url("../fonts/TildaSans-Light.eot");
+  src: url("../fonts/TildaSans-Light.woff2") format("woff2"), url("../fonts/TildaSans-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TildaSansSemibold";
+  src: url("../fonts/TildaSans-Semibold.eot");
+  src: url("../fonts/TildaSans-Semibold.woff2") format("woff2"), url("../fonts/TildaSans-Semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.tilda-sans-bold {
+  font-family: "TildaSansBold";
+}
+
+.tilda-sans-light {
+  font-family: "TildaSansLight";
+}
+
+.tilda-sans-semibold {
+  font-family: "TildaSansSemibold";
+}
+
 .header {
   display: flex;
   flex-flow: row nowrap;

@@ -32,56 +32,38 @@
   font-family: "TildaSansSemibold";
 }
 
-.writing {
-  padding: 10px 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
 }
-.writing__resetBtn {
-  font-size: 25px;
-  padding: 10px 30px;
-  cursor: pointer;
-  margin-bottom: 30px;
+.footer__logo {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
 }
-.writing__explanation {
-  padding-bottom: 20px;
-  font-size: 25px;
+.footer__links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
-.writing__question {
-  font-size: 35px;
-  font-weight: bold;
-}
-.writing__text {
-  margin-top: 20px;
-  resize: none;
-  display: block;
-  width: 100%;
-  font-size: 24px;
-  height: 200px;
-  padding: 5px;
-}
-.writing__submitBtn {
+.footer__links a {
   display: inline-block;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  padding: 5px 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
 }
-
-.timer {
-  font-size: 40px;
+.footer__links a img {
+  display: inline-block;
+  width: 60%;
+}
+.footer__copyright {
   text-align: center;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-.timer__done {
-  color: #ec1c24;
-}
-.timer__done p {
-  color: black;
-}
-.timer__state {
-  margin-top: 40px;
-  font-weight: bold;
 }

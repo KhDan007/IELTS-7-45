@@ -1,5 +1,28 @@
+import '../css/Home.css';
+import { Slogan } from './home/Slogan';
+import { Trial } from './home/Trial';
+import { Examples } from './home/Examples';
+import { Advantages } from './home/Advantages';
+import { Books } from './home/Books';
+import { How } from './home/How';
+import { Alim } from './home/Alim';
+import { Reviews } from './home/Reviews';
+import { ImagesSlider } from './home/ImagesSlider';
+import { Links } from './home/Links';
 export const Home = () => {
-   return <div className="home">
-      
-   </div>;
+   return (
+      <>
+         <Slogan />
+         <Trial />
+         <Examples />
+         <Advantages />
+         <Books />
+         <How />
+         <Alim />
+         <Reviews />
+         <Trial />
+         <ImagesSlider />
+         <Links />
+      </>
+   );
 };
