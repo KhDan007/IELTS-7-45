@@ -246,16 +246,36 @@ body {
    position: relative;
    width: 100%;
    height: 0;
-   padding-top: 56.25%; /* 16:9 aspect ratio */
+   padding-top: 56.25%;
+   /* 16:9 aspect ratio */
    overflow: hidden;
- }
- 
- .slider-image {
+}
+
+.slider-image {
    position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
    object-fit: cover;
- }
- 
+}
+
+.whatsapp, .instagram, .telegram {
+   display: inline-block;
+   width: 100%;
+   background-color: #27d061;
+   text-align: center;
+   padding: 10px 0px;
+   border-radius: 20px;
+   img {
+      display: inline-block;
+      margin: 0 auto;
+      max-width: 30px;
+   }
+}
+.instagram {
+   background-color: #f00075;
+}
+.telegram {
+   background-color: #1d98dc;
+}

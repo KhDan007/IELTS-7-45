@@ -7,7 +7,7 @@ import img5 from '../../img/images/5.jpg';
 
 export const ImagesSlider = () => {
    return (
-      <div className="images text-center">
+      <div className="images text-center py-4">
          <Carousel>
             <Carousel.Item>
                <div className="images__image">

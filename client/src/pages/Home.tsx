@@ -8,6 +8,7 @@ import { How } from './home/How';
 import { Alim } from './home/Alim';
 import { Reviews } from './home/Reviews';
 import { ImagesSlider } from './home/ImagesSlider';
+import { Links } from './home/Links';
 export const Home = () => {
    return (
       <>
@@ -21,6 +22,7 @@ export const Home = () => {
          <Reviews />
          <Trial />
          <ImagesSlider />
+         <Links />
       </>
    );
 };
