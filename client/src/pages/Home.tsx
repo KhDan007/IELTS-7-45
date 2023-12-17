@@ -5,6 +5,7 @@ import { Examples } from './home/Examples';
 import { Advantages } from './home/Advantages';
 import { Books } from './home/Books';
 import { How } from './home/How';
+import { Alim } from './home/Alim';
 export const Home = () => {
    return (
       <>
@@ -14,6 +15,7 @@ export const Home = () => {
          <Advantages />
          <Books />
          <How />
+         <Alim />
       </>
    );
 };

@@ -211,3 +211,18 @@ body {
     left: 0 !important;
   }
 }
+
+.alim__top {
+  padding-bottom: 60px;
+  position: relative;
+}
+.alim__top::after {
+  content: "";
+  height: 3px;
+  background-color: #222222;
+  display: inline-block;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 50px;
+}
