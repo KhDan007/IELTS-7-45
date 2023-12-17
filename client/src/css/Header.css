@@ -1,3 +1,4 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @font-face {
   font-family: "TildaSansBold";
   src: url("../fonts/TildaSans-Bold.eot");
@@ -19,6 +20,18 @@
   font-weight: normal;
   font-style: normal;
 }
+.tilda-sans-bold {
+  font-family: "TildaSansBold";
+}
+
+.tilda-sans-light {
+  font-family: "TildaSansLight";
+}
+
+.tilda-sans-semibold {
+  font-family: "TildaSansSemibold";
+}
+
 .header {
   display: flex;
   flex-flow: row nowrap;
