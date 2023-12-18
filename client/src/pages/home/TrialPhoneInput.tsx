@@ -13,7 +13,7 @@ export const TrialPhoneInput = () => {
       <input
          name="phone"
          type="tel"
-         placeholder="+7 (999) 999-99-99"
+         placeholder="+7 (777) 777-77-77"
          className="form-control input"
          onChange={handlePhoneNumberInput}
          value={phoneNumber}
