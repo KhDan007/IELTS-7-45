@@ -15,7 +15,7 @@ import { QueryClient, QueryClientProvider} from '@tanstack/react-query';
 
 function App() {
    return (
-      <div className="App">
+      <div className="App d-flex flex-column" style={{minHeight: "100vh"}}>
          <QueryClientProvider client={new QueryClient({
             defaultOptions: {
                queries: {

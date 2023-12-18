@@ -6,7 +6,7 @@ import instagram from '../img/links/instagram.png';
 
 export const Footer: React.FC = () => {
    return (
-      <footer className="footer">
+      <footer className="mt-auto footer">
          <Container>
             <Row className="align-items-center">
                <Col xs={4}>
