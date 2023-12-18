@@ -31,7 +31,7 @@ export const Links = () => {
                <Col xs={6} sm={4}>
                   <a
                      className="telegram"
-                     href='https://t.me/khamz1n'
+                     href='https://t.me/wise745'
                      target="_blank"
                      rel="noopener noreferrer"
                   >
