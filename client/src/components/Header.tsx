@@ -1,32 +1,4 @@
-// import { Link } from 'react-router-dom';
-
-// export const Header = () => {
-//    return (
-//       <header className="header">
-//          <div className="header__left">
-//             <div className="header__logo">
-//                <img src={logoTransparent} />
-//             </div>
-
-//             <Link to="/">Home</Link>
-//             <Link to="/speaking/part-1">Speaking - Part 1</Link>
-//             <Link to="/speaking/part-2">Speaking - Part 2</Link>
-//             <Link to="/writing/part-1">Writing - Part 1</Link>
-//             <Link to="/writing/part-2">Writing - Part 2</Link>
-//          </div>
-
-//          <div className="header__right">
-//             <div className="header__slogan">
-//                <img src={sloganTransparent} alt="" />
-//             </div>
-//             <Link to="/profile" className="header__profile">
-//                <img src={profilePic} alt="" />
-//             </Link>
-//          </div>
-//       </header>
-//    );
-// };
-
+import { Link } from 'react-router-dom';
 import { Image, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import sloganTransparent from '../img/slogan_transparent.png';
 import logoTransparent from '../img/logo_transparent.png';
@@ -34,32 +6,43 @@ import profilePic from '../img/profile.png';
 
 export function Header() {
    return (
-      <Navbar expand="lg" className="bg-body-tertiary">
-         <Container>
-            <Navbar.Brand className='header__brand' href="">
+      <Navbar fixed="top" expand="md" className="bg-body-tertiary">
+         <Container className="justify-content-between">
+            <Navbar.Brand className="header__brand" as={Link} to="/">
                <Image src={logoTransparent}></Image>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+
+            <Navbar.Toggle
+               className="justify-content-end"
+               aria-controls="basic-navbar-nav"
+            />
+
+            <Navbar.Collapse
+               className="justify-content-end"
+               id="basic-navbar-nav"
+            >
                <Nav className="me-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Link</Nav.Link>
-                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                     <NavDropdown.Item href="#action/3.1">
-                        Action
+                  <NavDropdown title="Speaking" id="basic-nav-dropdown">
+                     <NavDropdown.Item as={Link} to="/speaking/part-1">
+                        Part 1
                      </NavDropdown.Item>
-                     <NavDropdown.Item href="#action/3.2">
-                        Another action
+                     <NavDropdown.Item as={Link} to="/speaking/part-2">
+                        Part 2
                      </NavDropdown.Item>
-                     <NavDropdown.Item href="#action/3.3">
-                        Something
+                  </NavDropdown>
+                  <NavDropdown title="Writing" id="basic-nav-dropdown">
+                     <NavDropdown.Item as={Link} to="/writing/part-1">
+                        Task 1
                      </NavDropdown.Item>
-                     <NavDropdown.Divider />
-                     <NavDropdown.Item href="#action/3.4">
-                        Separated link
+                     <NavDropdown.Item as={Link} to="/writing/part-2">
+                        Task 2
                      </NavDropdown.Item>
                   </NavDropdown>
                </Nav>
+
+               <Nav.Link as={Link} to="/profile" className="header__profile">
+                  <Image src={profilePic}></Image>
+               </Nav.Link>
             </Navbar.Collapse>
          </Container>
       </Navbar>

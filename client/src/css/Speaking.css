@@ -32,6 +32,10 @@
   font-family: "TildaSansSemibold";
 }
 
+body {
+  padding-top: 60px;
+}
+
 .speaking {
   padding-top: 30px;
   max-width: 1200px;

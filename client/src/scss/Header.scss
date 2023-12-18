@@ -1,11 +1,20 @@
 @import 'main';
 
-.header {
-   &__brand {
-      max-width: 70px;
+   .header {
+      &__brand {
+         max-width: 70px;
 
-      img {
-         width: 100%;
+         img {
+            width: 100%;
+         }
+      }
+
+      &__profile {
+         margin-top: 10px;
+         display: inline-block;
+         img {
+            width: 55px;
+            height: 55px;
+         }
       }
    }
-}
