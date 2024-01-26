@@ -11,33 +11,44 @@ import { Writing_1 } from './pages/Writing_1';
 import { Writing_2 } from './pages/Writing_2';
 import { Home } from './pages/Home';
 
-import { QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Srs } from './pages/Srs';
 
 function App() {
    return (
-      <div className="App d-flex flex-column" style={{minHeight: "100vh"}}>
-         <QueryClientProvider client={new QueryClient({
-            defaultOptions: {
-               queries: {
-                  staleTime: Infinity,
-               }
+      <div className="App d-flex flex-column" style={{ minHeight: '100vh' }}>
+         <QueryClientProvider
+            client={
+               new QueryClient({
+                  defaultOptions: {
+                     queries: {
+                        staleTime: Infinity
+                     }
+                  }
+               })
             }
-         })}>
+         >
             <Router>
-            <Header />
+               <Header />
 
-            <Routes>
-               <Route path='/' element={<Home />}></Route>
-               <Route path='/speaking/part-1' element={<Speaking_1 />}></Route>
-               <Route path='/speaking/part-2' element={<Speaking_2 />}></Route>
-               <Route path='/writing/part-1' element={<Writing_1 />}></Route>
-               <Route path='/writing/part-2' element={<Writing_2 />}></Route>
-            </Routes>
+               <Routes>
+                  <Route path="/" element={<Home />}></Route>
+                  <Route
+                     path="/speaking/part-1"
+                     element={<Speaking_1 />}
+                  ></Route>
+                  <Route
+                     path="/speaking/part-2"
+                     element={<Speaking_2 />}
+                  ></Route>
+                  <Route path="/writing/part-1" element={<Writing_1 />}></Route>
+                  <Route path="/writing/part-2" element={<Writing_2 />}></Route>
+                  <Route path="/srs" element={<Srs />}></Route>
+               </Routes>
 
-            <Footer />
-         </Router>
+               <Footer />
+            </Router>
          </QueryClientProvider>
-         
       </div>
    );
 }

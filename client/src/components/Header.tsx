@@ -38,6 +38,9 @@ export function Header() {
                         Task 2
                      </NavDropdown.Item>
                   </NavDropdown>
+                  <Nav.Link as={Link} to="/srs">
+                    SRS
+                  </Nav.Link>
                </Nav>
 
                <Nav.Link as={Link} to="/profile" className="header__profile">
