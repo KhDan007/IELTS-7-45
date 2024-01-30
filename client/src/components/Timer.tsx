@@ -44,10 +44,10 @@ export const Timer = (props: any) => {
 
          {done && (
             <div className="timer__done">
-               <p>
+               <h3>
                   Your time exceeded. Please finish answering the question as
                   soon as possible.
-               </p>
+               </h3>
                {state.sign}
                {state.minutes < 10 ? '0' + state.minutes : state.minutes}:
                {state.seconds < 10 ? '0' + state.seconds : state.seconds}
