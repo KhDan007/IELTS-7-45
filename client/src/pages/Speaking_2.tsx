@@ -68,7 +68,7 @@ export const Speaking_2 = () => {
    };
 
    const refetchData = () => {
-      refetch()
+      window.location.reload();
    }
 
    return (

@@ -18,7 +18,7 @@ export const Speaking_1 = () => {
    };
 
    const refetchData = () => {
-      refetch();
+      window.location.reload();
    };
 
    return (
