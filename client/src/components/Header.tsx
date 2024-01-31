@@ -8,7 +8,7 @@ export function Header() {
    return (
       <Navbar fixed="top" expand="md" className="bg-body-tertiary">
          <Container className="justify-content-between">
-            <Navbar.Brand className="header__brand" as={Link} to="/">
+            <Navbar.Brand className="header__brand" as={Link} to="/IELTS-7-45">
                <Image src={logoTransparent}></Image>
             </Navbar.Brand>
 
