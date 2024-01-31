@@ -2,7 +2,7 @@ import './css/App.css';
 import './css/Header.css';
 import './css/Speaking.css';
 import './css/Writing.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Speaking_1 } from './pages/Speaking_1';
