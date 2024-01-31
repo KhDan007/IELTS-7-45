@@ -32,7 +32,7 @@ function App() {
                <Header />
 
                <Routes>
-                  <Route path="/IELTS-7-45" element={<Home />}></Route>
+                  <Route path="/" element={<Home />}></Route>
                   <Route
                      path="/speaking/part-1"
                      element={<Speaking_1 />}
