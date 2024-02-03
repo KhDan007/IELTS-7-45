@@ -2,8 +2,21 @@ import { Container, Col, Row, Image, Form, Button } from 'react-bootstrap';
 import { TrialPhoneInput } from './TrialPhoneInput';
 import books from '../../img/books.png';
 import { Title } from './Title';
+import { useRef } from 'react';
+import useForm from './components/UseForm';
+
+const FORM_ENDPOINT = 'http://localhost:8080/contacts'; // TODO - update to the correct endpoint
 
 export const Trial = () => {
+   const formElement = useRef(null);
+   const additionalData = {
+      sent: new Date().toISOString()
+   };
+
+   const { handleSubmit, status, message } = useForm({
+      additionalData
+   });
+
    return (
       <div className="trial mb-4">
          <Container>
@@ -21,18 +34,20 @@ export const Trial = () => {
                   <p className="tilda-sans-light pb-0 pb-md-4">
                      Оставьте свои данные и наш менеджер свяжется с вами
                   </p>
-                  <Form>
-                     <Form.Group controlId="city">
+                  <Form onSubmit={handleSubmit} action={FORM_ENDPOINT} method="POST">
+                     <Form.Group controlId="name">
                         <Form.Control
+                           name='name'
                            type="text"
-                           placeholder="Астана"
+                           placeholder="Введите ваше имя"
                            className="mb-5 input"
+                           required
                         />
                      </Form.Group>
                      <TrialPhoneInput />
                      <Button
                         className="px-5 py-3 trial__btn tilda-sans-bold mt-md-5 mt-4"
-                        type="button"
+                        type="submit"
                      >
                         Отправить
                      </Button>

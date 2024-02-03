@@ -11,7 +11,7 @@ export const TrialPhoneInput = () => {
 
    return (
       <input
-         name="phone"
+         name="phoneNumber"
          type="tel"
          placeholder="+7 (777) 777-77-77"
          className="form-control input"
